@@ -79,7 +79,7 @@ int pt_mmap_create(pt_segment_t *seg, const char *file, size_t size)
     int fd;
 
     /* file open */
-    umask(0000);
+    //umask(0000);
     fd = open(file, O_RDWR | O_CREAT, DEFFILEMODE);
     if (fd == -1) {
         return reset_with_retval(seg, -1);
